@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+}
+
+/* HOME */
+main {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(12, 12, 12);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 1rem;
+    padding: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.moviesDiv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* PAGINA INDIVIDUAL DE FILME */
+.movie-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.movie-details img {
+    width: 500px;
+}
+
+.movie-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.movie-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+.movie-background .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.movie-info {
+    width: 600px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+    .movie-details {
+        flex-direction: column;
+    }
+
+    .movie-info {
+        width: 400px;
+    }
+    .movie-details h1 {
+        font-size: 2rem;
+    }
+
+    .movie-details h2 {
+        font-size: 1rem;
+    }
+
+    .movie-details p {
+        font-size: 0.8rem;
+    }
+}
+
+/* SOBRE */
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; 
+}
+
+#sobre-container {
+    width: 800px;
+}
+
+#credit {
+  margin-top: 2rem;
+  color: #838383;
+}
